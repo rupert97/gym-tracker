@@ -1,0 +1,125 @@
+---
+// src/components/workout/ExerciseList.astro
+import ExerciseSelect from './ExerciseSelect.tsx';
+---
+
+<div class="bg-white rounded-xl shadow-md p-4">
+    <div class="flex items-center justify-between mb-4">
+        <h2 class="text-lg font-semibold text-gray-900">Exercises</h2>
+    </div>
+
+    <div id="exercises-container" class="space-y-4">
+        <!-- Ejercicios aparecerán aquí -->
+    </div>
+</div>
+
+<!-- Template para clonar -->
+<div id="exercise-template" class="hidden">
+    <div class="border border-gray-200 rounded-lg p-4 space-y-3 exercise-card">
+        <div class="flex items-center justify-between">
+            <h3 class="font-medium text-gray-900">Exercise</h3>
+            <button class="text-red-500 hover:text-red-700 text-sm remove-exercise-btn">Delete</button>
+        </div>
+
+        <div class="exercise-select-wrapper">
+            <ExerciseSelect client:only="preact" />
+        </div>
+
+        <div class="space-y-3">
+            <div class="flex items-center justify-between">
+                <span class="text-sm font-medium text-gray-700 mb-2 sm:mb-0">Sets</span>
+                <button class="add-set-btn text-blue-600 text-sm hover:text-blue-800 self-start sm:self-auto">
+                    + Set
+                </button>
+            </div>
+
+            <div class="sets-container space-y-3">
+                <div class="flex flex-col sm:flex-row gap-2">
+                    <input
+                            type="number"
+                            placeholder="Reps"
+                            class="w-full sm:flex-1 p-2 border border-gray-300 rounded text-sm"
+                    />
+                    <input
+                            type="number"
+                            placeholder="Weight (lb)"
+                            class="w-full sm:flex-1 p-2 border border-gray-300 rounded text-sm"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón para añadir otro ejercicio debajo -->
+        <div class="text-right pt-4">
+            <button class="add-exercise-btn bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
+                + Add Exercise
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    let exerciseCount = 0;
+    let selectedMuscleGroup = '';
+
+    // Escuchar grupo muscular seleccionado
+    window.addEventListener('muscleGroupSelected', (e) => {
+        selectedMuscleGroup = e.detail;
+    });
+
+    function createExerciseCard() {
+        const template = document.getElementById('exercise-template');
+        if (!template) return null;
+
+        const clone = template.querySelector('.exercise-card').cloneNode(true);
+        exerciseCount++;
+        clone.querySelector('h3').textContent = `Exercise ${exerciseCount}`;
+
+        // Eliminar tarjeta
+        clone.querySelector('.remove-exercise-btn')?.addEventListener('click', () => {
+            const allCards = document.querySelectorAll('.exercise-card');
+            if (allCards.length <= 2) {
+                alert('At least one exercise is required.');
+                return;
+            }
+            clone.remove();
+        });
+
+        // Añadir serie
+        clone.querySelector('.add-set-btn')?.addEventListener('click', () => {
+            const setsContainer = clone.querySelector('.sets-container');
+            const setDiv = document.createElement('div');
+            setDiv.className = 'flex space-x-2';
+            setDiv.innerHTML = `
+                <input type="number" placeholder="Reps" class="flex-1 p-2 border border-gray-300 rounded text-sm">
+                <input type="number" placeholder="Peso (lb)" class="flex-1 p-2 border border-gray-300 rounded text-sm">
+                <button class="text-red-500 hover:text-red-700 text-sm px-2" onclick="this.parentElement.remove()">×</button>
+            `;
+            setsContainer?.appendChild(setDiv);
+        });
+
+
+        // Botón interno para añadir otro ejercicio
+        clone.querySelector('.add-exercise-btn')?.addEventListener('click', () => {
+            if (!selectedMuscleGroup) {
+                alert('Please select a muscle group before adding an exercise.');
+                return;
+            }
+            const newCard = createExerciseCard();
+            if (newCard) {
+                clone.after(newCard);
+            }
+        });
+
+        return clone;
+    }
+
+    // Inicializa con la primera tarjeta automáticamente
+    document.addEventListener('DOMContentLoaded', () => {
+        const container = document.getElementById('exercises-container');
+        const firstCard = createExerciseCard();
+        if (container && firstCard) {
+            container.appendChild(firstCard);
+        }
+    });
+</script>

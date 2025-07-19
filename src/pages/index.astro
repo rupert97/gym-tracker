@@ -1,16 +1,137 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import MuscleGroupSelector from '../components/MuscleGroupSelector.astro';
+import WarmupSection from '../components/WarmupSection.astro';
+import ExerciseList from '../components/ExerciseList.astro';
+import CardioSection from '../components/CardioSection.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Workout - Gym Tracker">
+
+        <div class="max-w-md mx-auto p-4 space-y-6">
+            <MuscleGroupSelector/>
+
+            <ExerciseList/>
+
+            <WarmupSection/>
+
+            <CardioSection/>
+
+            <!-- Save Button -->
+            <div class="sticky bottom-4">
+                <button id="save-workout"
+                        class="w-full bg-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors shadow-lg">
+                    💾 Save Workout
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let workoutData = {
+            date: new Date().toISOString().split('T')[0],
+            muscleGroup: '',
+            warmup: [],
+            exercises: [],
+            cardio: []
+        };
+
+        // Escuchar el grupo muscular seleccionado (enviado desde MuscleGroupSelector.astro)
+        window.addEventListener('muscleGroupSelected', (event) => {
+            const group = event.detail;
+            workoutData.muscleGroup = group;
+        });
+
+        document.getElementById('save-workout')?.addEventListener('click', async () => {
+            try {
+                // === 📌 CAPTURAR EJERCICIOS ===
+                const exerciseCards = document.querySelectorAll('.exercise-card');
+                const exercises = [];
+
+                exerciseCards.forEach((card) => {
+                    const selectEl = card.querySelector('.exercise-select-wrapper select');
+                    const exerciseName = selectEl?.value || null;
+
+                    const sets = [];
+                    const setInputs = card.querySelectorAll('.sets-container > div');
+                    setInputs.forEach((setDiv) => {
+                        const inputs = setDiv.querySelectorAll('input');
+                        if (inputs.length >= 2) {
+                            const reps = parseInt(inputs[0].value);
+                            const weight = parseFloat(inputs[1].value);
+                            if (!isNaN(reps) && !isNaN(weight)) {
+                                sets.push({reps, weight});
+                            }
+                        }
+                    });
+
+                    if (exerciseName && sets.length > 0) {
+                        exercises.push({name: exerciseName, sets});
+                    }
+                });
+
+                workoutData.exercises = exercises;
+
+
+                // === 🔥 CAPTURAR WARMUP (si está activo y existe) ===
+                const warmupToggle = document.getElementById('warmup-toggle');
+                const warmupSection = document.getElementById('warmup-content');
+
+                if (warmupToggle?.checked && warmupSection) {
+                    const inputs = warmupSection.querySelectorAll('input');
+                    const selects = warmupSection.querySelectorAll('select');
+
+                    const warmup = {
+                        exercise: inputs[0]?.value?.trim() || '',
+                        intensity: selects[0]?.value || '',
+                        duration: parseInt(inputs[1]?.value) || 0
+                    };
+
+                    if (warmup.exercise || warmup.duration > 0 || warmup.intensity) {
+                        workoutData.warmup = [warmup];
+                    }
+                }
+
+                // === 🏃 CAPTURAR CARDIO (si está activo y existe) ===
+                const cardioToggle = document.getElementById('cardio-toggle');
+                const cardioSection = document.getElementById('cardio-content');
+
+                if (cardioToggle?.checked && cardioSection) {
+                    const selects = cardioSection.querySelectorAll('select');
+                    const input = cardioSection.querySelector('input[type="number"]');
+
+                    const cardio = {
+                        type: selects[0]?.value || '',
+                        duration: parseInt(input?.value) || 0,
+                        intensity: selects[1]?.value || ''
+                    };
+
+                    if (cardio.type || cardio.duration > 0 || cardio.intensity) {
+                        workoutData.cardio = cardio;
+                    }
+                } else {
+                    workoutData.cardio = null;
+                }
+
+                const hasExercises = workoutData.exercises.length > 0;
+                const hasCardio =
+                    workoutData.cardio &&
+                    (workoutData.cardio.type || workoutData.cardio.duration > 0 || workoutData.cardio.intensity);
+
+                if (!hasExercises && !hasCardio) {
+                    console.error('Error saving workout: No exercises or cardio provided.');
+                    alert('Error saving the workout: Please enter at least one exercise or cardio session.');
+                    return;
+                }
+
+                // === ✅ MOSTRAR EN CONSOLA ===
+                console.log('Saving workout:', workoutData);
+                alert('Workout saved successfully!');
+            } catch (error) {
+                console.error('Error saving workout:', error);
+                alert('Error saving the workout');
+            }
+        });
+    </script>
+
+</Layout>

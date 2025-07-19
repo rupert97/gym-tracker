@@ -1,0 +1,16 @@
+---
+import NutritionHeader from '../../components/NutritionHeader.astro';
+import ShoppingListTab from "../../components/ShoppingListTab.astro";
+import Layout from "../../layouts/Layout.astro";
+---
+<Layout title="Shopping List - Gym Tracker">
+    <main class="min-h-screen bg-gray-50">
+        <!-- Header -->
+        <NutritionHeader/>
+            <!-- Tab Content -->
+            <div id="shopping-content" class="p-4">
+                <ShoppingListTab />
+            </div>
+    </main>
+
+</Layout>

@@ -1,0 +1,62 @@
+---
+import Back from '../icons/Back.astro'
+import Shoulder from '../icons/Shoulder.astro'
+import Arm from '../icons/Arm.astro'
+import Chest from '../icons/Chest.astro'
+import Leg from '../icons/Leg.astro'
+import Abs from '../icons/Abs.astro'
+
+const muscleGroups = [
+    { id: 'chest', name: 'Chest', icon: Chest },
+    { id: 'back', name: 'Back', icon: Back },
+    { id: 'legs', name: 'Legs', icon: Leg },
+    { id: 'shoulders', name: 'Shoulders', icon: Shoulder },
+    { id: 'arms', name: 'Arms', icon: Arm },
+    { id: 'core', name: 'Core', icon: Abs }
+];
+---
+
+<div class="bg-white rounded-xl shadow-md p-4">
+    <h2 class="text-lg font-semibold text-gray-900 mb-4">Muscular Group</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        {muscleGroups.map(({ id, name, icon: Icon }) => (
+                <button
+                        class="muscle-group-btn flex flex-col items-center justify-center aspect-square p-4 border-2 border-gray-200 rounded-xl shadow-sm hover:border-blue-500 hover:bg-blue-50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        data-group={id}
+                        type="button"
+                >
+                    <div class="mb-2 w-20 h-20 flex items-center justify-center">
+                        {/* For SVG icons: enforce their size */}
+                        <Icon class="w-full h-full object-contain text-inherit" />
+                    </div>
+                    <div class="text-base font-medium  text-center">{name}</div>
+                </button>
+        ))}
+    </div>
+</div>
+
+
+<script>
+    document.querySelectorAll('.muscle-group-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const target = e.currentTarget;
+            const group = target.dataset.group;
+
+            // Desactivar estilos de todos
+            document.querySelectorAll('.muscle-group-btn').forEach(b => {
+                b.classList.remove('border-blue-500', 'bg-blue-50', 'text-blue-700');
+                b.classList.add('border-gray-200', 'text-gray-700'); // ← color default del ícono
+            });
+
+            // Activar estilos del seleccionado
+            target.classList.add('border-blue-500', 'bg-blue-50', 'text-blue-700');
+            target.classList.remove('border-gray-200', 'text-gray-700');
+
+            // Emitir evento
+            window.dispatchEvent(new CustomEvent('muscleGroupSelected', {
+                detail: group
+            }));
+        });
+    });
+</script>

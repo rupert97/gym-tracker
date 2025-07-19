@@ -1,0 +1,26 @@
+---
+import Arm from "../icons/Arm.astro";
+const currentPath = Astro.url.pathname;
+---
+
+<header class="bg-white rounded-xl shadow-md p-4 md:p-6 mb-6">
+    <div class="flex items-center justify-center gap-2 mb-4">
+        <Arm class="w-auto h-10 text-gray-900"/>
+
+        <div class="text-center">
+            <h1 class="text-3xl font-bold text-gray-900">Gym Tracker</h1>
+            <p class="text-sm text-gray-500">Track your workouts and nutrition</p>
+        </div>
+    </div>
+
+    <nav class="flex justify-center gap-4 mt-4">
+        <a href="/" class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors
+      ${currentPath === '/' ? 'bg-blue-100 text-blue-700' : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'}`}>
+            Workout
+        </a>
+        <a href="/nutrition" class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors
+      ${currentPath === '/nutrition' ? 'bg-blue-100 text-blue-700' : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'}`}>
+            Nutrition
+        </a>
+    </nav>
+</header>

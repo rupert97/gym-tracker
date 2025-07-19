@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/Layout.astro';
+import MuscleGroupSelector from '../components/MuscleGroupSelector.astro';
+import WarmupSection from '../components/WarmupSection.astro';
+import ExerciseList from '../components/ExerciseList.astro';
+import CardioSection from '../components/CardioSection.astro';
+---
+
+<Layout title="Entrenamiento - Gym Tracker">
+    <main class="min-h-screen bg-gray-50">
+        <!-- Header -->
+        <div class="bg-white shadow-sm border-b">
+            <div class="max-w-md mx-auto px-4 py-4">
+                <div class="flex items-center space-x-3">
+                    <a href="/" class="text-gray-600 hover:text-gray-900">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </a>
+                    <h1 class="text-xl font-semibold text-gray-900">Entrenamiento</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-md mx-auto p-4 space-y-6">
+            <!-- Muscle Group Selection -->
+            <MuscleGroupSelector />
+
+            <!-- Warm-up Section -->
+            <WarmupSection />
+
+            <!-- Exercise List -->
+            <ExerciseList />
+
+            <!-- Cardio Section -->
+            <CardioSection />
+
+            <!-- Save Button -->
+            <div class="sticky bottom-4">
+                <button id="save-workout" class="w-full bg-blue-600 text-white py-3 px-4 rounded-xl font-semibold hover:bg-blue-700 transition-colors shadow-lg">
+                    💾 Guardar Rutina
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Workout data management
+        let workoutData = {
+            date: new Date().toISOString().split('T')[0],
+            muscleGroup: '',
+            warmup: [],
+            exercises: [],
+            cardio: null
+        };
+
+        // Save workout function
+        document.getElementById('save-workout')?.addEventListener('click', async () => {
+            try {
+                // Here you would integrate with Supabase
+                console.log('Saving workout:', workoutData);
+                alert('Rutina guardada exitosamente!');
+            } catch (error) {
+                console.error('Error saving workout:', error);
+                alert('Error al guardar la rutina');
+            }
+        });
+    </script>
+</Layout>
