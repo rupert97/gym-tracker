@@ -18,7 +18,7 @@ Inside of your Astro project, you'll see the following folders and files:
 /
 ├── public/
 ├── src/
-│   ├── components/      # Astro UI components (e.g., WarmupSection, CardioSection, MuscleGroupSelector)
+│   ├── components/      # Astro UI components (e.g. WarmupSection, CardioSection, MuscleGroupSelector)
 │   ├── layouts/         # Layout components
 │   ├── lib/             # Supabase integration and helpers
 │   └── pages/           # Application pages (index, workout, nutrition)

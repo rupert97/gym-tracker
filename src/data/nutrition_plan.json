@@ -1,0 +1,469 @@
+{
+  "monday": {
+    "breakfast": {
+      "items": [
+        {"name": "3 huevos revueltos con cebolla y tomate", "calories": 240, "protein": 18, "carbs": 4, "fat": 17},
+        {"name": "1 arepa de maíz", "calories": 150, "protein": 3, "carbs": 30, "fat": 1},
+        {"name": "30g queso fresco (cuajada)", "calories": 80, "protein": 5, "carbs": 1, "fat": 6},
+        {"name": "1 banano", "calories": 90, "protein": 1, "carbs": 23, "fat": 0},
+        {"name": "1 vaso de leche", "calories": 130, "protein": 7, "carbs": 10, "fat": 7}
+      ],
+      "ingredients": [
+        {"quantity": "3", "name": "huevos"},
+        {"quantity": "1/4", "name": "cebolla"},
+        {"quantity": "1/2", "name": "tomate"},
+        {"quantity": "1", "name": "arepa de maíz"},
+        {"quantity": "30g", "name": "queso fresco"},
+        {"quantity": "1", "name": "banano"},
+        {"quantity": "1 vaso", "name": "leche"}
+      ]
+    },
+    "morning_snack": {
+      "items": [
+        {"name": "2 tajadas pan integral", "calories": 160, "protein": 6, "carbs": 24, "fat": 2},
+        {"name": "1 cucharada mantequilla de maní", "calories": 90, "protein": 4, "carbs": 3, "fat": 8},
+        {"name": "1 manzana", "calories": 95, "protein": 0, "carbs": 25, "fat": 0}
+      ],
+      "ingredients": [
+        {"quantity": "2 tajadas", "name": "pan integral"},
+        {"quantity": "1 cucharada", "name": "mantequilla de maní"},
+        {"quantity": "1", "name": "manzana"}
+      ]
+    },
+    "lunch": {
+      "items": [
+        {"name": "150g pechuga de pollo a la plancha", "calories": 240, "protein": 45, "carbs": 0, "fat": 5},
+        {"name": "1 taza arroz blanco", "calories": 205, "protein": 4, "carbs": 45, "fat": 0},
+        {"name": "1/2 taza lentejas", "calories": 115, "protein": 9, "carbs": 20, "fat": 0},
+        {"name": "ensalada con aguacate", "calories": 120, "protein": 2, "carbs": 8, "fat": 10},
+        {"name": "1 cdita aceite de oliva", "calories": 40, "protein": 0, "carbs": 0, "fat": 4.5}
+      ],
+      "ingredients": [
+        {"quantity": "150g", "name": "pechuga de pollo"},
+        {"quantity": "1 taza", "name": "arroz blanco"},
+        {"quantity": "1/2 taza", "name": "lentejas"},
+        {"quantity": "porción", "name": "ensalada con aguacate"},
+        {"quantity": "1 cdita", "name": "aceite de oliva"}
+      ]
+    },
+    "afternoon_snack": {
+      "items": [
+        {"name": "1 yogur griego sin azúcar (170g)", "calories": 100, "protein": 17, "carbs": 6, "fat": 0},
+        {"name": "1 puñado de maní tostado sin sal", "calories": 170, "protein": 7, "carbs": 6, "fat": 15},
+        {"name": "1 mandarina", "calories": 50, "protein": 1, "carbs": 12, "fat": 0}
+      ],
+      "ingredients": [
+        {"quantity": "170g", "name": "yogur griego sin azúcar"},
+        {"quantity": "1 puñado", "name": "maní tostado sin sal"},
+        {"quantity": "1", "name": "mandarina"}
+      ]
+    },
+    "dinner": {
+      "items": [
+        {"name": "2 arepas pequeñas", "calories": 200, "protein": 4, "carbs": 40, "fat": 2},
+        {"name": "2 huevos duros", "calories": 140, "protein": 12, "carbs": 2, "fat": 10},
+        {"name": "50g queso", "calories": 160, "protein": 10, "carbs": 1, "fat": 13},
+        {"name": "tomate en rodajas", "calories": 20, "protein": 1, "carbs": 4, "fat": 0},
+        {"name": "1 vaso de avena (avena en agua)", "calories": 150, "protein": 5, "carbs": 27, "fat": 3}
+      ],
+      "ingredients": [
+        {"quantity": "2", "name": "arepas pequeñas"},
+        {"quantity": "2", "name": "huevos"},
+        {"quantity": "50g", "name": "queso"},
+        {"quantity": "1/2", "name": "tomate"},
+        {"quantity": "1 vaso", "name": "avena en agua"}
+      ]
+    }
+  },
+  "tuesday": {
+    "breakfast": {
+      "items": [
+        {"name": "1 taza de avena cocida con leche", "calories": 220, "protein": 8, "carbs": 32, "fat": 6},
+        {"name": "1 cucharada mantequilla de maní", "calories": 90, "protein": 4, "carbs": 3, "fat": 8},
+        {"name": "1/2 banano en rodajas", "calories": 45, "protein": 0.5, "carbs": 11.5, "fat": 0},
+        {"name": "1 scoop de proteína en polvo", "calories": 120, "protein": 24, "carbs": 3, "fat": 1}
+      ],
+      "ingredients": [
+        {"quantity": "1 taza", "name": "avena"},
+        {"quantity": "1 taza", "name": "leche"},
+        {"quantity": "1 cucharada", "name": "mantequilla de maní"},
+        {"quantity": "1/2", "name": "banano"},
+        {"quantity": "1 scoop", "name": "proteína en polvo"}
+      ]
+    },
+    "morning_snack": {
+      "items": [
+        {"name": "1 almojábana", "calories": 180, "protein": 4, "carbs": 25, "fat": 7},
+        {"name": "1 café con leche", "calories": 50, "protein": 2, "carbs": 5, "fat": 2},
+        {"name": "10 nueces o almendras", "calories": 80, "protein": 3, "carbs": 3, "fat": 7}
+      ],
+      "ingredients": [
+        {"quantity": "1", "name": "almojábana"},
+        {"quantity": "1 taza", "name": "café con leche"},
+        {"quantity": "10", "name": "nueces o almendras"}
+      ]
+    },
+    "lunch": {
+      "items": [
+        {"name": "150g carne molida magra", "calories": 300, "protein": 25, "carbs": 0, "fat": 20},
+        {"name": "1 papa mediana cocida", "calories": 160, "protein": 4, "carbs": 37, "fat": 0},
+        {"name": "ensalada (zanahoria, lechuga, remolacha)", "calories": 70, "protein": 2, "carbs": 12, "fat": 3},
+        {"name": "1 cucharadita de aceite", "calories": 40, "protein": 0, "carbs": 0, "fat": 4.5},
+        {"name": "1 tajada de aguacate", "calories": 50, "protein": 1, "carbs": 3, "fat": 5}
+      ],
+      "ingredients": [
+        {"quantity": "150g", "name": "carne molida magra"},
+        {"quantity": "1", "name": "papa mediana cocida"},
+        {"quantity": "porción", "name": "ensalada"},
+        {"quantity": "1 cdita", "name": "aceite"},
+        {"quantity": "1 tajada", "name": "aguacate"}
+      ]
+    },
+    "afternoon_snack": {
+      "items": [
+        {"name": "1 sándwich con pan integral, huevo duro y jamón", "calories": 250, "protein": 12, "carbs": 30, "fat": 10},
+        {"name": "1 vaso de jugo natural sin azúcar", "calories": 100, "protein": 1, "carbs": 24, "fat": 0}
+      ],
+      "ingredients": [
+        {"quantity": "2 tajadas", "name": "pan integral"},
+        {"quantity": "1", "name": "huevo duro"},
+        {"quantity": "2 tajadas", "name": "jamón de pechuga"},
+        {"quantity": "1 vaso", "name": "jugo natural"}
+      ]
+    },
+    "dinner": {
+      "items": [
+        {"name": "2 huevos revueltos con champiñones", "calories": 200, "protein": 14, "carbs": 4, "fat": 14},
+        {"name": "1 taza arroz blanco", "calories": 205, "protein": 4, "carbs": 45, "fat": 0},
+        {"name": "1 vaso de leche", "calories": 130, "protein": 7, "carbs": 10, "fat": 7}
+      ],
+      "ingredients": [
+        {"quantity": "2", "name": "huevos"},
+        {"quantity": "1/2 taza", "name": "champiñones"},
+        {"quantity": "1 taza", "name": "arroz"},
+        {"quantity": "1 vaso", "name": "leche"}
+      ]
+    }
+  },
+  "wednesday": {
+    "breakfast": {
+      "items": [
+        {"name": "Changua (2 huevos, leche, cilantro, cebolla)", "calories": 260, "protein": 18, "carbs": 12, "fat": 17},
+        {"name": "1 almojábana", "calories": 180, "protein": 4, "carbs": 25, "fat": 7},
+        {"name": "1 mandarina", "calories": 50, "protein": 1, "carbs": 12, "fat": 0}
+      ],
+      "ingredients": [
+        {"quantity": "2", "name": "huevos"},
+        {"quantity": "1 taza", "name": "leche"},
+        {"quantity": "al gusto", "name": "cilantro"},
+        {"quantity": "1/4", "name": "cebolla"},
+        {"quantity": "1", "name": "almojábana"},
+        {"quantity": "1", "name": "mandarina"}
+      ]
+    },
+    "morning_snack": {
+      "items": [
+        {"name": "1 porción avena cocida con canela", "calories": 150, "protein": 5, "carbs": 27, "fat": 3},
+        {"name": "1 banano", "calories": 90, "protein": 1, "carbs": 23, "fat": 0},
+        {"name": "1 cucharada de maní", "calories": 90, "protein": 4, "carbs": 3, "fat": 8}
+      ],
+      "ingredients": [
+        {"quantity": "1 porción", "name": "avena cocida"},
+        {"quantity": "1 cucharadita", "name": "canela"},
+        {"quantity": "1", "name": "banano"},
+        {"quantity": "1 cucharada", "name": "maní"}
+      ]
+    },
+    "lunch": {
+      "items": [
+        {"name": "150g pechuga de pollo sudado", "calories": 240, "protein": 45, "carbs": 0, "fat": 5},
+        {"name": "1 taza arroz blanco", "calories": 205, "protein": 4, "carbs": 45, "fat": 0},
+        {"name": "guiso con tomate y cebolla", "calories": 60, "protein": 1, "carbs": 8, "fat": 3},
+        {"name": "1 tajada de aguacate", "calories": 50, "protein": 1, "carbs": 3, "fat": 5},
+        {"name": "1 vaso limonada natural", "calories": 90, "protein": 0, "carbs": 22, "fat": 0}
+      ],
+      "ingredients": [
+        {"quantity": "150g", "name": "pechuga de pollo sudado"},
+        {"quantity": "1 taza", "name": "arroz blanco"},
+        {"quantity": "porción", "name": "guiso tomate y cebolla"},
+        {"quantity": "1 tajada", "name": "aguacate"},
+        {"quantity": "1 vaso", "name": "limonada natural"}
+      ]
+    },
+    "afternoon_snack": {
+      "items": [
+        {"name": "1 barra de cereal", "calories": 100, "protein": 2, "carbs": 18, "fat": 3},
+        {"name": "1 yogur natural", "calories": 90, "protein": 5, "carbs": 8, "fat": 4},
+        {"name": "1 cucharada granola", "calories": 50, "protein": 1, "carbs": 8, "fat": 2}
+      ],
+      "ingredients": [
+        {"quantity": "1", "name": "barra de cereal"},
+        {"quantity": "1 pote", "name": "yogur natural"},
+        {"quantity": "1 cucharada", "name": "granola"}
+      ]
+    },
+    "dinner": {
+      "items": [
+        {"name": "Arepa con queso", "calories": 180, "protein": 6, "carbs": 30, "fat": 6},
+        {"name": "1 huevo frito", "calories": 90, "protein": 6, "carbs": 0, "fat": 7},
+        {"name": "verduras al vapor", "calories": 80, "protein": 3, "carbs": 12, "fat": 1},
+        {"name": "1 vaso de leche", "calories": 130, "protein": 7, "carbs": 10, "fat": 7}
+      ],
+      "ingredients": [
+        {"quantity": "1", "name": "arepa"},
+        {"quantity": "30g", "name": "queso"},
+        {"quantity": "1", "name": "huevo"},
+        {"quantity": "porción", "name": "verduras al vapor"},
+        {"quantity": "1 vaso", "name": "leche"}
+      ]
+    }
+  },
+  "thursday": {
+    "breakfast": {
+      "items": [
+        {"name": "2 arepas con queso", "calories": 300, "protein": 12, "carbs": 60, "fat": 8},
+        {"name": "2 huevos cocidos", "calories": 140, "protein": 12, "carbs": 2, "fat": 10},
+        {"name": "1 vaso de jugo de naranja", "calories": 110, "protein": 2, "carbs": 26, "fat": 0}
+      ],
+      "ingredients": [
+        {"quantity": "2", "name": "arepas"},
+        {"quantity": "30g", "name": "queso"},
+        {"quantity": "2", "name": "huevos cocidos"},
+        {"quantity": "1 vaso", "name": "jugo de naranja"}
+      ]
+    },
+    "morning_snack": {
+      "items": [
+        {"name": "1 pan integral con mantequilla de maní", "calories": 230, "protein": 8, "carbs": 30, "fat": 10},
+        {"name": "1 banano", "calories": 90, "protein": 1, "carbs": 23, "fat": 0}
+      ],
+      "ingredients": [
+        {"quantity": "1 tajada", "name": "pan integral"},
+        {"quantity": "1 cucharada", "name": "mantequilla de maní"},
+        {"quantity": "1", "name": "banano"}
+      ]
+    },
+    "lunch": {
+      "items": [
+        {"name": "150g carne asada", "calories": 300, "protein": 26, "carbs": 0, "fat": 20},
+        {"name": "1 taza arroz con zanahoria", "calories": 220, "protein": 4, "carbs": 45, "fat": 2},
+        {"name": "ensalada repollo con mayonesa light", "calories": 100, "protein": 1, "carbs": 8, "fat": 8},
+        {"name": "1 papa salada", "calories": 160, "protein": 4, "carbs": 37, "fat": 0}
+      ],
+      "ingredients": [
+        {"quantity": "150g", "name": "carne asada"},
+        {"quantity": "1 taza", "name": "arroz con zanahoria"},
+        {"quantity": "porción", "name": "ensalada repollo con mayonesa light"},
+        {"quantity": "1", "name": "papa salada"}
+      ]
+    },
+    "afternoon_snack": {
+      "items": [
+        {"name": "1 taza yogur griego con frutas", "calories": 150, "protein": 12, "carbs": 18, "fat": 5},
+        {"name": "1 cucharada semillas de chía", "calories": 60, "protein": 2, "carbs": 5, "fat": 4}
+      ],
+      "ingredients": [
+        {"quantity": "1 taza", "name": "yogur griego con frutas"},
+        {"quantity": "1 cucharada", "name": "semillas de chía"}
+      ]
+    },
+    "dinner": {
+      "items": [
+        {"name": "Huevos pericos", "calories": 200, "protein": 14, "carbs": 4, "fat": 14},
+        {"name": "1 arepa", "calories": 100, "protein": 2, "carbs": 20, "fat": 1},
+        {"name": "1 taza chocolate caliente con leche", "calories": 180, "protein": 7, "carbs": 27, "fat": 6}
+      ],
+      "ingredients": [
+        {"quantity": "2 huevos", "name": "huevos pericos"},
+        {"quantity": "1/4", "name": "cebolla y tomate"},
+        {"quantity": "1", "name": "arepa"},
+        {"quantity": "1 taza", "name": "chocolate caliente con leche"}
+      ]
+    }
+  },
+  "friday": {
+    "breakfast": {
+      "items": [
+        {"name": "1 taza avena con leche", "calories": 220, "protein": 8, "carbs": 32, "fat": 6},
+        {"name": "1 cucharada mantequilla de maní", "calories": 90, "protein": 4, "carbs": 3, "fat": 8},
+        {"name": "1 scoop proteína en polvo", "calories": 120, "protein": 24, "carbs": 3, "fat": 1},
+        {"name": "1/2 banano", "calories": 45, "protein": 0.5, "carbs": 11.5, "fat": 0}
+      ],
+      "ingredients": [
+        {"quantity": "1 taza", "name": "avena"},
+        {"quantity": "1 taza", "name": "leche"},
+        {"quantity": "1 cucharada", "name": "mantequilla de maní"},
+        {"quantity": "1 scoop", "name": "proteína en polvo"},
+        {"quantity": "1/2", "name": "banano"}
+      ]
+    },
+    "morning_snack": {
+      "items": [
+        {"name": "Pan con queso derretido", "calories": 200, "protein": 8, "carbs": 25, "fat": 9},
+        {"name": "1 jugo natural", "calories": 100, "protein": 1, "carbs": 24, "fat": 0},
+        {"name": "1 huevo duro", "calories": 70, "protein": 6, "carbs": 0, "fat": 5}
+      ],
+      "ingredients": [
+        {"quantity": "1 porción", "name": "pan con queso"},
+        {"quantity": "1 vaso", "name": "jugo natural"},
+        {"quantity": "1", "name": "huevo duro"}
+      ]
+    },
+    "lunch": {
+      "items": [
+        {"name": "150g pechuga de pollo en salsa champiñones", "calories": 280, "protein": 45, "carbs": 5, "fat": 8},
+        {"name": "1 taza arroz integral", "calories": 215, "protein": 5, "carbs": 45, "fat": 2},
+        {"name": "ensalada lechuga, tomate y zanahoria", "calories": 70, "protein": 2, "carbs": 10, "fat": 3},
+        {"name": "1/4 aguacate", "calories": 60, "protein": 1, "carbs": 3, "fat": 5}
+      ],
+      "ingredients": [
+        {"quantity": "150g", "name": "pechuga de pollo"},
+        {"quantity": "porción", "name": "salsa de champiñones"},
+        {"quantity": "1 taza", "name": "arroz integral"},
+        {"quantity": "porción", "name": "ensalada"},
+        {"quantity": "1/4", "name": "aguacate"}
+      ]
+    },
+    "afternoon_snack": {
+      "items": [
+        {"name": "1 barra de proteína o sándwich de jamón", "calories": 220, "protein": 12, "carbs": 25, "fat": 8},
+        {"name": "1 taza de fruta (papaya, piña)", "calories": 90, "protein": 1, "carbs": 23, "fat": 0}
+      ],
+      "ingredients": [
+        {"quantity": "1", "name": "barra de proteína o sándwich"},
+        {"quantity": "1 taza", "name": "fruta picada"}
+      ]
+    },
+    "dinner": {
+      "items": [
+        {"name": "Arepa con huevo revuelto y plátano maduro", "calories": 300, "protein": 10, "carbs": 50, "fat": 10},
+        {"name": "1 vaso de avena", "calories": 150, "protein": 5, "carbs": 27, "fat": 3}
+      ],
+      "ingredients": [
+        {"quantity": "1", "name": "arepa"},
+        {"quantity": "1 huevo", "name": "huevo revuelto"},
+        {"quantity": "2 tajadas", "name": "plátano maduro"},
+        {"quantity": "1 vaso", "name": "avena"}
+      ]
+    }
+  },
+  "saturday": {
+    "breakfast": {
+      "items": [
+        {"name": "Huevos con hogao (2–3 huevos)", "calories": 260, "protein": 18, "carbs": 6, "fat": 18},
+        {"name": "2 tajadas de pan", "calories": 160, "protein": 6, "carbs": 28, "fat": 2},
+        {"name": "1 taza de café", "calories": 5, "protein": 0, "carbs": 1, "fat": 0},
+        {"name": "1 fruta (guayaba o mango)", "calories": 100, "protein": 1, "carbs": 25, "fat": 1}
+      ],
+      "ingredients": [
+        {"quantity": "2–3", "name": "huevos"},
+        {"quantity": "porción", "name": "hogao"},
+        {"quantity": "2", "name": "tajadas de pan"},
+        {"quantity": "1 taza", "name": "café"},
+        {"quantity": "1", "name": "fruta"}
+      ]
+    },
+    "morning_snack": {
+      "items": [
+        {"name": "Yogur con avena y granola", "calories": 180, "protein": 10, "carbs": 25, "fat": 5},
+        {"name": "Maní", "calories": 90, "protein": 4, "carbs": 3, "fat": 8}
+      ],
+      "ingredients": [
+        {"quantity": "1 taza", "name": "yogur con avena y granola"},
+        {"quantity": "1 puñado", "name": "maní"}
+      ]
+    },
+    "lunch": {
+      "items": [
+        {"name": "Bandeja paisa ligera", "calories": 600, "protein": 30, "carbs": 75, "fat": 25},
+        {"name": "Agua panela con limón", "calories": 120, "protein": 0, "carbs": 30, "fat": 0}
+      ],
+      "ingredients": [
+        {"quantity": "porción", "name": "bandeja paisa ligera"},
+        {"quantity": "1 vaso", "name": "agua panela con limón"}
+      ]
+    },
+    "afternoon_snack": {
+      "items": [
+        {"name": "1 empanada al horno o arepa rellena con pollo", "calories": 250, "protein": 10, "carbs": 30, "fat": 12},
+        {"name": "1 fruta", "calories": 90, "protein": 1, "carbs": 23, "fat": 0}
+      ],
+      "ingredients": [
+        {"quantity": "1", "name": "empanada o arepa rellena"},
+        {"quantity": "1", "name": "fruta"}
+      ]
+    },
+    "dinner": {
+      "items": [
+        {"name": "Papas al vapor + huevo cocido + ensalada", "calories": 300, "protein": 15, "carbs": 40, "fat": 10},
+        {"name": "1 vaso de leche", "calories": 130, "protein": 7, "carbs": 10, "fat": 7}
+      ],
+      "ingredients": [
+        {"quantity": "porción", "name": "papas al vapor"},
+        {"quantity": "1", "name": "huevo cocido"},
+        {"quantity": "porción", "name": "ensalada"},
+        {"quantity": "1 vaso", "name": "leche"}
+      ]
+    }
+  },
+  "sunday": {
+    "breakfast": {
+      "items": [
+        {"name": "Caldo de costilla con papa y cilantro", "calories": 250, "protein": 20, "carbs": 15, "fat": 12},
+        {"name": "Arepa", "calories": 100, "protein": 2, "carbs": 20, "fat": 1},
+        {"name": "1 jugo de fruta natural", "calories": 100, "protein": 1, "carbs": 24, "fat": 0}
+      ],
+      "ingredients": [
+        {"quantity": "1 plato", "name": "caldo de costilla con papa"},
+        {"quantity": "1", "name": "arepa"},
+        {"quantity": "1 vaso", "name": "jugo de fruta natural"}
+      ]
+    },
+    "morning_snack": {
+      "items": [
+        {"name": "Pan integral + mantequilla de maní + banano", "calories": 250, "protein": 8, "carbs": 35, "fat": 10}
+      ],
+      "ingredients": [
+        {"quantity": "2 tajadas", "name": "pan integral"},
+        {"quantity": "1 cucharada", "name": "mantequilla de maní"},
+        {"quantity": "1", "name": "banano"}
+      ]
+    },
+    "lunch": {
+      "items": [
+        {"name": "150g pechuga de pollo o carne asada", "calories": 240, "protein": 26, "carbs": 0, "fat": 12},
+        {"name": "1 taza arroz", "calories": 205, "protein": 4, "carbs": 45, "fat": 0},
+        {"name": "lentejas o fríjoles", "calories": 115, "protein": 9, "carbs": 20, "fat": 0},
+        {"name": "aguacate + ensalada", "calories": 120, "protein": 2, "carbs": 8, "fat": 10}
+      ],
+      "ingredients": [
+        {"quantity": "150g", "name": "pechuga de pollo o carne asada"},
+        {"quantity": "1 taza", "name": "arroz"},
+        {"quantity": "1/2 taza", "name": "lentejas o fríjoles"},
+        {"quantity": "porción", "name": "ensalada con aguacate"}
+      ]
+    },
+    "afternoon_snack": {
+      "items": [
+        {"name": "Yogur natural con fruta", "calories": 120, "protein": 6, "carbs": 15, "fat": 4},
+        {"name": "1 cucharada semillas (linaza o chía)", "calories": 60, "protein": 2, "carbs": 5, "fat": 4}
+      ],
+      "ingredients": [
+        {"quantity": "1 pote", "name": "yogur natural con fruta"},
+        {"quantity": "1 cucharada", "name": "semillas de linaza o chía"}
+      ]
+    },
+    "dinner": {
+      "items": [
+        {"name": "2 arepas con huevo y queso", "calories": 300, "protein": 14, "carbs": 40, "fat": 14},
+        {"name": "1 taza chocolate caliente", "calories": 180, "protein": 7, "carbs": 27, "fat": 6}
+      ],
+      "ingredients": [
+        {"quantity": "2", "name": "arepas"},
+        {"quantity": "1", "name": "huevo"},
+        {"quantity": "30g", "name": "queso"},
+        {"quantity": "1 taza", "name": "chocolate caliente"}
+      ]
+    }
+  }
+}

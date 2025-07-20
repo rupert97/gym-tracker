@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DailyPlanTab from '../components/DailyPlanTab.astro';
+import ShoppingListTab from '../components/ShoppingListTab.astro';
+---
+
+<Layout title="Nutrition - Gym Tracker">
+    <main class="min-h-screen bg-gray-50 transition-colors">
+
+        <div class="max-w-md mx-auto">
+            <!-- Tab Navigation -->
+            <div class="bg-white border-b">
+                <div class="flex">
+                    <button id="daily-tab" class="flex-1 py-3 px-4 text-center font-medium text-blue-600 border-b-2 border-blue-600">
+                        Daily Plan
+                    </button>
+                    <button id="shopping-tab" class="flex-1 py-3 px-4 text-center font-medium text-gray-600 hover:text-gray-900">
+                        Shopping List
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="daily-content" class="p-4">
+                <DailyPlanTab />
+            </div>
+
+            <div id="shopping-content" class="p-4 hidden">
+                <ShoppingListTab />
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Tab switching functionality
+        const dailyTab = document.getElementById('daily-tab');
+        const shoppingTab = document.getElementById('shopping-tab');
+        const dailyContent = document.getElementById('daily-content');
+        const shoppingContent = document.getElementById('shopping-content');
+
+        dailyTab?.addEventListener('click', () => {
+            dailyTab.classList.add('text-blue-600', 'border-blue-600');
+            dailyTab.classList.remove('text-gray-600');
+            shoppingTab?.classList.add('text-gray-600');
+            shoppingTab?.classList.remove('text-blue-600', 'border-blue-600');
+
+            dailyContent?.classList.remove('hidden');
+            shoppingContent?.classList.add('hidden');
+        });
+
+        shoppingTab?.addEventListener('click', () => {
+            shoppingTab.classList.add('text-blue-600', 'border-blue-600');
+            shoppingTab.classList.remove('text-gray-600');
+            dailyTab?.classList.add('text-gray-600');
+            dailyTab?.classList.remove('text-blue-600', 'border-blue-600');
+
+            shoppingContent?.classList.remove('hidden');
+            dailyContent?.classList.add('hidden');
+        });
+    </script>
+</Layout>
