@@ -1,0 +1,176 @@
+{
+  "by_unit": [
+    {
+      "name": "huevo",
+      "quantity": 31
+    },
+    {
+      "name": "arepa de maíz",
+      "quantity": 4
+    },
+    {
+      "name": "arepas pequeñas",
+      "quantity": 2
+    },
+    {
+      "name": "manzana",
+      "quantity": 3
+    },
+    {
+      "name": "banano",
+      "quantity": 3
+    },
+    {
+      "name": "mandarina",
+      "quantity": 2
+    },
+    {
+      "name": "tortilla integral",
+      "quantity": 1
+    },
+    {
+      "name": "tortilla de maíz",
+      "quantity": 2
+    },
+    {
+      "name": "tomate",
+      "quantity": 1
+    }
+  ],
+  "by_weight": [
+    {
+      "name": "pan integral",
+      "quantity_g": 640
+    },
+    {
+      "name": "queso fresco (cuajada) / queso fresco",
+      "quantity_g": 170
+    },
+    {
+      "name": "queso semigraso / queso semiduro / queso",
+      "quantity_g": 110
+    },
+    {
+      "name": "jamón / jamón de cerdo",
+      "quantity_g": 100
+    },
+    {
+      "name": "proteína whey",
+      "quantity_g": 225
+    },
+    {
+      "name": "avena en hojuelas / avena",
+      "quantity_g": 340
+    },
+    {
+      "name": "maní / maní tostado sin sal",
+      "quantity_g": 80
+    },
+    {
+      "name": "arroz blanco cocido / arroz blanco",
+      "quantity_g": 990
+    },
+    {
+      "name": "lentejas cocidas / lentejas",
+      "quantity_g": 700
+    },
+    {
+      "name": "pollo desmechado / pechuga de pollo / pechuga de pollo asada",
+      "quantity_g": 960
+    },
+    {
+      "name": "carne molida magra",
+      "quantity_g": 690
+    },
+    {
+      "name": "plátano maduro",
+      "quantity_g": 420
+    },
+    {
+      "name": "pasta cocida",
+      "quantity_g": 420
+    },
+    {
+      "name": "zanahoria",
+      "quantity_g": 200
+    },
+    {
+      "name": "habichuela",
+      "quantity_g": 90
+    },
+    {
+      "name": "papa / papas cocidas",
+      "quantity_g": 530
+    },
+    {
+      "name": "tomate",
+      "quantity_g": 160
+    },
+    {
+      "name": "lechuga",
+      "quantity_g": 110
+    },
+    {
+      "name": "espinaca",
+      "quantity_g": 40
+    },
+    {
+      "name": "maíz cocido",
+      "quantity_g": 40
+    },
+    {
+      "name": "guiso (tomate, cebolla, ajo)",
+      "quantity_g": 100
+    },
+    {
+      "name": "ensalada mixta / ensalada verde / ensalada cocida (zanahoria, habichuela, papa) / ensalada con aguacate / ensalada (lechuga, tomate, zanahoria) / ensalada cocida",
+      "quantity_g": 670
+    },
+    {
+      "name": "wrap integral / wrap de trigo integral / wrap de harina",
+      "quantity_g": 220
+    },
+    {
+      "name": "nueces",
+      "quantity_g": 20
+    },
+    {
+      "name": "papaya",
+      "quantity_g": 360
+    },
+    {
+      "name": "yogur griego sin azúcar / yogur griego natural / yogur natural",
+      "quantity_g": 770
+    },
+    {
+      "name": "cuajada",
+      "quantity_g": 30
+    },
+    {
+      "name": "mantequilla de maní",
+      "quantity_g": 60
+    },
+    {
+      "name": "aceite de oliva",
+      "quantity_g": 35
+    }
+  ],
+  "by_volume": [
+    {
+      "name": "leche / leche entera / leche semidescremada",
+      "quantity_ml": 1420
+    },
+    {
+      "name": "café negro",
+      "quantity_ml": 400
+    },
+    {
+      "name": "jugo natural",
+      "quantity_ml": 200
+    },
+    {
+      "name": "avena en agua",
+      "quantity_ml": 250
+    }
+  ]
+}

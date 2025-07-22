@@ -4,11 +4,11 @@ import nutritionData from '../data/nutrition_plan.json';
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 const dayKeys = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
 const meals = [
-    { id: 'breakfast', name: 'Breakfast', icon: '🌅' },
-    { id: 'morning_snack', name: 'Morning Snack', icon: '☕' },
-    { id: 'lunch', name: 'Lunch', icon: '☀️' },
-    { id: 'afternoon_snack', name: 'Afternoon Snack', icon: '🍎' },
-    { id: 'dinner', name: 'Dinner', icon: '🌙' }
+    { id: 'breakfast', name: 'Desayuno', icon: '🌅' },
+    { id: 'morning_snack', name: 'Media Mañana', icon: '☕' },
+    { id: 'lunch', name: 'Almuerzo', icon: '☀️' },
+    { id: 'afternoon_snack', name: 'Merienda', icon: '🍎' },
+    { id: 'dinner', name: 'Cena', icon: '🌙' }
 ];
 
 // Function to calculate totals for a meal
@@ -144,7 +144,8 @@ function calculateMealTotals(mealData) {
         const dayData = nutritionData[currentDay];
         if (!dayData) return;
 
-        let dailyTotals = { calories: 0, protein: 0, carbs: 0, fat: 0 };
+        // Use pre-calculated daily totals from JSON
+        const dailyTotals = dayData.day_total || { calories: 0, protein: 0, carbs: 0, fat: 0 };
 
         meals.forEach(meal => {
             const mealData = dayData[meal.id];
@@ -152,19 +153,8 @@ function calculateMealTotals(mealData) {
 
             if (!mealCard || !mealData) return;
 
-            // Calculate meal totals
-            const totals = mealData.items.reduce((acc, item) => ({
-                calories: acc.calories + (item.calories || 0),
-                protein: acc.protein + (item.protein || 0),
-                carbs: acc.carbs + (item.carbs || 0),
-                fat: acc.fat + (item.fat || 0)
-            }), { calories: 0, protein: 0, carbs: 0, fat: 0 });
-
-            // Update daily totals
-            dailyTotals.calories += totals.calories;
-            dailyTotals.protein += totals.protein;
-            dailyTotals.carbs += totals.carbs;
-            dailyTotals.fat += totals.fat;
+            // Use pre-calculated meal totals from JSON
+            const totals = mealData.meal_total || { calories: 0, protein: 0, carbs: 0, fat: 0 };
 
             // Update meal header
             const caloriesElement = mealCard.querySelector('.meal-calories');
@@ -204,7 +194,7 @@ function calculateMealTotals(mealData) {
         `).join('');
             }
 
-            // Update detailed nutrition summary
+            // Update detailed nutrition summary with pre-calculated totals
             const totalCalories = mealCard.querySelector('.meal-total-calories');
             const totalProtein = mealCard.querySelector('.meal-total-protein');
             const totalCarbs = mealCard.querySelector('.meal-total-carbs');
@@ -216,7 +206,7 @@ function calculateMealTotals(mealData) {
             if (totalFat) totalFat.textContent = `${totals.fat}g`;
         });
 
-        // Update daily totals
+        // Update daily totals with pre-calculated values
         const dailyCaloriesEl = document.getElementById('daily-calories');
         const dailyProteinEl = document.getElementById('daily-protein');
         const dailyCarbsEl = document.getElementById('daily-carbs');
