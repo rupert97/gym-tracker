@@ -1,4 +1,5 @@
 # Gym Tracker
+<img width="1817" height="761" alt="image" src="https://github.com/user-attachments/assets/d61cb069-97d8-4736-9cea-e7331fa22383" />
 
 **Gym Tracker** is a web application that helps you track your workouts and nutrition. Built with [Astro](https://astro.build/), [Supabase](https://supabase.com/), and styled using [Tailwind CSS](https://tailwindcss.com/), it offers an intuitive and responsive experience for managing your fitness routine.
 
