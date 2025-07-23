@@ -1,6 +1,9 @@
 ---
 import Arm from "../icons/Arm.astro";
 const currentPath = Astro.url.pathname;
+
+const normalizedPath = currentPath.endsWith('/') ? currentPath : `${currentPath}/`;
+
 ---
 
 <header class="bg-white rounded-xl shadow-md p-4 md:p-6 mb-6">
@@ -15,12 +18,13 @@ const currentPath = Astro.url.pathname;
 
     <nav class="flex justify-center gap-4 mt-4">
         <a href="/" class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors
-      ${currentPath === '/' ? 'bg-blue-100 text-blue-700' : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'}`}>
+      ${normalizedPath === '/' ? 'bg-blue-100 text-blue-700' : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'}`}>
             Workout
         </a>
         <a href="/nutrition" class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors
-      ${currentPath === '/nutrition' ? 'bg-blue-100 text-blue-700' : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'}`}>
+      ${normalizedPath === "/nutrition/" ? 'bg-blue-100 text-blue-700' : 'text-gray-700 hover:bg-blue-50 hover:text-blue-600'}`}>
             Nutrition
         </a>
     </nav>
+
 </header>
