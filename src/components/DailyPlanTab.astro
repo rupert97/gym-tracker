@@ -1,9 +1,10 @@
 ---
 import nutritionData from '../data/nutrition_plan.json';
+import type { MealData, NutritionPlan, NutritionItem, MealDefinition} from '../types/nutrition';
 
-const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-const dayKeys = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
-const meals = [
+const days : string[] = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+const dayKeys: (keyof NutritionPlan)[] = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+const meals : MealDefinition[] = [
     { id: 'breakfast', name: 'Breakfast', icon: '🌅' },
     { id: 'morning_snack', name: 'Morning Snack', icon: '☕' },
     { id: 'lunch', name: 'Lunch', icon: '☀️' },
@@ -12,10 +13,10 @@ const meals = [
 ];
 
 // Function to calculate totals for a meal
-function calculateMealTotals(mealData) {
-    if (!mealData || !mealData.items) return { calories: 0, protein: 0, carbs: 0, fat: 0 };
+function calculateMealTotals(mealData?: MealData): NutritionItem {
+    if (!mealData?.items) return { calories: 0, protein: 0, carbs: 0, fat: 0 };
 
-    return mealData.items.reduce((totals, item) => ({
+    return mealData.items.reduce<NutritionItem>((totals, item) => ({
         calories: totals.calories + (item.calories || 0),
         protein: totals.protein + (item.protein || 0),
         carbs: totals.carbs + (item.carbs || 0),
@@ -35,7 +36,6 @@ function calculateMealTotals(mealData) {
         </select>
     </div>
 
-    <!-- Meals List -->
     <div id="meals-container" class="space-y-4">
         {meals.map(meal => (
                 <div class="meal-card bg-white rounded-lg border border-gray-200 overflow-hidden" data-meal={meal.id}>

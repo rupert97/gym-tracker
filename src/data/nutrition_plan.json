@@ -363,7 +363,7 @@
         "fat": 30
       }
     },
-    "snack_1": {
+    "morning_snack": {
       "items": [
         {
           "name": "1.5 scoops de proteína whey (45g)",
@@ -464,7 +464,7 @@
         "fat": 22
       }
     },
-    "snack_2": {
+    "afternoon_snack": {
       "items": [
         {
           "name": "200g de yogur griego natural",
@@ -626,7 +626,7 @@
         "fat": 18
       }
     },
-    "snack_1": {
+    "morning_snack": {
       "items": [
         {
           "name": "1 scoop de proteína whey en agua (30g)",
@@ -746,7 +746,7 @@
         "fat": 17
       }
     },
-    "snack_2": {
+    "afternoon_snack": {
       "items": [
         {
           "name": "Wrap de tortilla integral con jamón y queso",
@@ -890,7 +890,7 @@
         "fat": 20
       }
     },
-    "snack_1": {
+    "morning_snack": {
       "items": [
         {
           "name": "1.5 scoops de proteína whey (45g)",
@@ -972,7 +972,7 @@
         "fat": 24
       }
     },
-    "snack_2": {
+    "afternoon_snack": {
       "items": [
         {
           "name": "2 rebanadas de pan integral (80g) con 30g de mantequilla de maní",
@@ -1097,7 +1097,7 @@
         "fat": 25
       }
     },
-    "snack_1": {
+    "morning_snack": {
       "items": [
         {
           "name": "1.5 scoops de proteína whey (45g)",
@@ -1177,7 +1177,7 @@
         "fat": 7.5
       }
     },
-    "snack_2": {
+    "afternoon_snack": {
       "items": [
         {
           "name": "2 tostadas de pan integral (80g)",
@@ -1295,7 +1295,7 @@
         "fat": 19
       }
     },
-    "snack_1": {
+    "morning_snack": {
       "items": [
         {
           "name": "1.5 scoops de proteína whey (45g)",
@@ -1376,7 +1376,7 @@
         "fat": 21
       }
     },
-    "snack_2": {
+    "afternoon_snack": {
       "items": [
         {
           "name": "200g de yogur natural",
@@ -1509,7 +1509,7 @@
         "fat": 18
       }
     },
-    "snack_1": {
+    "morning_snack": {
       "items": [
         {
           "name": "1.5 scoops de proteína whey (45g)",
@@ -1621,7 +1621,7 @@
         "fat": 24
       }
     },
-    "snack_2": {
+    "afternoon_snack": {
       "items": [
         {
           "name": "1 wrap de harina (60g)",
