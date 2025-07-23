@@ -1,0 +1,281 @@
+---
+import LinkedinLogo from '../icons/LinkedinLogo.astro';
+import GithubLogo from '../icons/GithubLogo.astro';
+---
+
+<footer class="bg-white border-t border-gray-200 mt-8">
+    <div class="max-w-md mx-auto px-4 py-6">
+        <!-- App Info Section -->
+        <div class="text-center mb-6">
+            <div class="flex items-center justify-center space-x-2 mb-2">
+                <span class="text-2xl">💪</span>
+                <h3 class="text-lg font-semibold text-gray-900">Gym Tracker</h3>
+            </div>
+            <p class="text-sm text-gray-600">Track your fitness journey and nutrition goals</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="grid grid-cols-2 gap-4 mb-6">
+            <div>
+                <h4 class="text-sm font-medium text-gray-900 mb-3">Features</h4>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="/entrenamiento" class="text-sm text-gray-600 hover:text-blue-600 transition-colors flex items-center space-x-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                            <span>Training</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/nutricion" class="text-sm text-gray-600 hover:text-green-600 transition-colors flex items-center space-x-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
+                            </svg>
+                            <span>Nutrition</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-sm font-medium text-gray-900 mb-3">Tools</h4>
+                <ul class="space-y-2">
+                    <li>
+                        <button class="text-sm text-gray-600 hover:text-purple-600 transition-colors flex items-center space-x-2" onclick="showProgressModal()">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                            <span>Progress</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="text-sm text-gray-600 hover:text-orange-600 transition-colors flex items-center space-x-2" onclick="showSettingsModal()">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>Settings</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Stats Summary -->
+        <div class="bg-gray-50 rounded-lg p-4 mb-6">
+            <h4 class="text-sm font-medium text-gray-900 mb-3 text-center">Weekly Summary</h4>
+            <div class="grid grid-cols-3 gap-4 text-center">
+                <div>
+                    <div class="text-lg font-bold text-blue-600" id="footer-workouts">0</div>
+                    <div class="text-xs text-gray-600">Workouts</div>
+                </div>
+                <div>
+                    <div class="text-lg font-bold text-green-600" id="footer-meals">0</div>
+                    <div class="text-xs text-gray-600">Meals</div>
+                </div>
+                <div>
+                    <div class="text-lg font-bold text-purple-600" id="footer-calories">0</div>
+                    <div class="text-xs text-gray-600">Avg Cal</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social/Contact Section -->
+        <div class="text-center mb-6">
+            <h4 class="text-sm font-medium text-gray-900 mb-3">Connect & Share</h4>
+            <div class="flex justify-center space-x-4">
+                <a
+                        href="https://linkedin.com/in/david-santiago-rodriguez-torres"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="p-2 text-gray-400 hover:text-blue-600 transition-colors"
+                        title="LinkedIn Profile"
+                >
+                    <LinkedinLogo class="w-5 h-5" />
+                </a>
+                <a
+                        href="https://github.com/rupert97/gym-tracker"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="p-2 text-gray-400 hover:text-gray-900 transition-colors"
+                        title="GitHub Profile"
+                >
+                    <GithubLogo class="w-5 h-5" />
+                </a>
+                <button class="p-2 text-gray-400 hover:text-green-600 transition-colors" onclick="shareApp()" title="Share App">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- App Version & Copyright -->
+        <div class="text-center border-t border-gray-200 pt-4">
+            <div class="flex items-center justify-center space-x-4 text-xs text-gray-500 mb-2">
+                <span>Version 1.0.0</span>
+                <span>•</span>
+                <button onclick="showPrivacyPolicy()" class="hover:text-gray-700 transition-colors">Privacy</button>
+                <span>•</span>
+                <button onclick="showTerms()" class="hover:text-gray-700 transition-colors">Terms</button>
+            </div>
+            <p class="text-xs text-gray-400">
+                © 2025 Gym Tracker. Made by Santiago Rodríguez for fitness enthusiasts
+            </p>
+        </div>
+    </div>
+
+    <!-- Quick Action Buttons (Floating) -->
+    <div class="fixed bottom-4 right-4 flex flex-col space-y-2 z-10">
+        <button
+                onclick="scrollToTop()"
+                class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all transform hover:scale-105"
+                title="Back to top"
+        >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+            </svg>
+        </button>
+
+        <button
+                onclick="showQuickAdd()"
+                class="bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-all transform hover:scale-105"
+                title="Quick add"
+        >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+            </svg>
+        </button>
+    </div>
+</footer>
+
+<style>
+    /* Smooth transitions for floating buttons */
+    .fixed.bottom-4.right-4 {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* Hover effects for interactive elements */
+    footer button:hover {
+        transform: translateY(-1px);
+    }
+
+    /* Mobile-specific adjustments */
+    @media (max-width: 480px) {
+        .fixed.bottom-4.right-4 {
+            bottom: 1rem;
+            right: 1rem;
+        }
+
+        .fixed.bottom-4.right-4 button {
+            padding: 0.75rem;
+        }
+
+        .fixed.bottom-4.right-4 svg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+    }
+</style>
+
+<script is:inline>
+    // Footer functionality
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function shareApp() {
+        if (navigator.share) {
+            navigator.share({
+                title: 'Gym Tracker',
+                text: 'Check out this awesome fitness and nutrition tracking app!',
+                url: window.location.href
+            });
+        } else {
+            // Fallback for browsers that don't support Web Share API
+            navigator.clipboard.writeText(window.location.href);
+            showToast('Link copied to clipboard!');
+        }
+    }
+
+    function exportData() {
+        // Placeholder for export functionality
+        showToast('Export feature coming soon!');
+    }
+
+    function showFeedback() {
+        // Placeholder for feedback modal
+        showToast('Feedback feature coming soon!');
+    }
+
+    function showProgressModal() {
+        showToast('Progress tracking coming soon!');
+    }
+
+    function showSettingsModal() {
+        showToast('Settings coming soon!');
+    }
+
+    function showPrivacyPolicy() {
+        showToast('Privacy policy coming soon!');
+    }
+
+    function showTerms() {
+        showToast('Terms of service coming soon!');
+    }
+
+    function showQuickAdd() {
+        showToast('Quick add feature coming soon!');
+    }
+
+    function showToast(message) {
+        // Create toast notification
+        const toast = document.createElement('div');
+        toast.className = 'fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-lg text-sm z-50 transition-opacity';
+        toast.textContent = message;
+
+        document.body.appendChild(toast);
+
+        // Fade out after 3 seconds
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            setTimeout(() => {
+                document.body.removeChild(toast);
+            }, 300);
+        }, 3000);
+    }
+
+    // Update footer stats (placeholder data)
+    function updateFooterStats() {
+        // These would be replaced with actual data from your app
+        document.getElementById('footer-workouts').textContent = '3';
+        document.getElementById('footer-meals').textContent = '21';
+        document.getElementById('footer-calories').textContent = '2.4k';
+    }
+
+    // Initialize footer stats when page loads
+    document.addEventListener('DOMContentLoaded', updateFooterStats);
+
+    // Hide floating buttons when scrolling up, show when scrolling down
+    let lastScrollTop = 0;
+    const floatingButtons = document.querySelector('.fixed.bottom-4.right-4');
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scrolling down
+            floatingButtons.style.transform = 'translateY(0)';
+            floatingButtons.style.opacity = '1';
+        } else if (scrollTop < 50) {
+            // Near top
+            floatingButtons.style.transform = 'translateY(20px)';
+            floatingButtons.style.opacity = '0.7';
+        }
+
+        lastScrollTop = scrollTop;
+    });
+</script>
+
+
